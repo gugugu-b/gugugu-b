@@ -6,11 +6,39 @@
 
 ## 👋 Hi, I'm Pionites
 
-🎓 **Identity:** AI Infrastructure Researcher & Developer  
-🧪 **Focus:** AI Infra — from silicon to software stack, enabling large-scale model training & inference  
-📍 **Location:** 杭州市萧山区, China  
-📧 **Contact:** (your email here)  
-🔗 **Blog:** (your website here)
+🎓 **Identity:** AI Infrastructure / GPU Cluster Network Engineer  
+📍 **Location:** 杭州  
+🧪 **Core Focus:** AI Cluster Network Architecture & Performance Optimization  
+🎯 **Specialization:** Distributed Training Communication, GPU Cluster Scale-Up/Scale-Out  
+📊 **Current Scale:** 512~1024 GPU Multi-Node Clusters, Scaling Beyond
+
+---
+
+## 🧪 Technical Stack
+
+### 🏗️ Infrastructure Layer
+- RDMA / RoCEv2 / InfiniBand Network Protocols
+- NCCL Communication Scheduling (Ring/Tree Routing, Channel, QP Configuration)
+- GPU Direct RDMA / GDR Optimization
+- Spine-Leaf / Dragonfly Network Topology
+
+### ⚡ Performance Optimization Layer
+- AI Network Congestion Control (ECN/PFC/DCQCN)
+- NCCL Log Analysis & Communication Bottleneck Profiling
+- Network Buffer Control & Tail Latency Optimization
+- AI Network Monitoring Metrics System
+
+### 🤖 Training & Inference
+- Distributed Training Parallelism (DP/TP/PP/MoE alltoallv)
+- LLM Inference Frameworks (vLLM, DeepEP)
+- GPU Cluster Scheduling (K8s NUMA Affinity, Slurm)
+
+---
+
+## 📧 Contact
+
+- **Email:** [zhangzixuan761@gmail.com](mailto:zhangzixuan761@gmail.com)
+- **Blog:** (your website here)
 
 ---
 
@@ -37,5 +65,8 @@
 <p align="center">
   <a href="https://github.com/gugugu-b">
     <img src="https://img.shields.io/badge/GitHub-gugugu--b-blue?style=flat-square&logo=github"/>
+  </a>
+  <a href="mailto:zhangzixuan761@gmail.com">
+    <img src="https://img.shields.io/badge/Email-zhangzixuan761@gmail.com-blue?style=flat-square&logo=gmail"/>
   </a>
 </p>
