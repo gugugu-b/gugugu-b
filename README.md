@@ -1,13 +1,10 @@
-<p align="center">
-  <img src="header.png" width="100%" alt="Welcome"/>
-</p>
-
----
-
 ## 👋 Hi, I'm Pionites
 
+[![email](https://img.shields.io/badge/Email-zhangzixuan761%40gmail.com-blue?logo=gmail&style=flat-square)](mailto:zhangzixuan761@gmail.com)
+[![location](https://img.shields.io/badge/Location-杭州-blue?style=flat-square&logo=location&logoColor=white)](#)
+[![focus](https://img.shields.io/badge/Focus-AI%20Cluster%20Network-blue?style=flat-square)](#)
+
 🎓 **Identity:** AI Infrastructure / GPU Cluster Network Engineer  
-📍 **Location:** 杭州  
 🧪 **Core Focus:** AI Cluster Network Architecture & Performance Optimization  
 🎯 **Specialization:** Distributed Training Communication, GPU Cluster Scale-Up/Scale-Out  
 📊 **Current Scale:** 512~1024 GPU Multi-Node Clusters, Scaling Beyond
@@ -23,13 +20,13 @@
 - Spine-Leaf / Dragonfly Network Topology
 
 ### ⚡ Performance Optimization Layer
-- AI Network Congestion Control (ECN/PFC/DCQCN)
+- AI Network Congestion Control (ECN / PFC / DCQCN)
 - NCCL Log Analysis & Communication Bottleneck Profiling
 - Network Buffer Control & Tail Latency Optimization
 - AI Network Monitoring Metrics System
 
 ### 🤖 Training & Inference
-- Distributed Training Parallelism (DP/TP/PP/MoE alltoallv)
+- Distributed Training Parallelism (DP / TP / PP / MoE alltoallv)
 - LLM Inference Frameworks (vLLM, DeepEP)
 - GPU Cluster Scheduling (K8s NUMA Affinity, Slurm)
 
@@ -65,8 +62,5 @@
 <p align="center">
   <a href="https://github.com/gugugu-b">
     <img src="https://img.shields.io/badge/GitHub-gugugu--b-blue?style=flat-square&logo=github"/>
-  </a>
-  <a href="mailto:zhangzixuan761@gmail.com">
-    <img src="https://img.shields.io/badge/Email-zhangzixuan761@gmail.com-blue?style=flat-square&logo=gmail"/>
   </a>
 </p>
