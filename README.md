@@ -54,8 +54,8 @@
 
 ## 📊 GitHub Stats
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=gugugu-b&theme=transparent&hide_border=true&layout=compact)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=gugugu-b&theme=transparent&hide_border=true&layout=compact&card_width=320)
+[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=gugugu-b&theme=transparent&hide_border=true)](https://github.com/gugugu-b)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=gugugu-b&theme=transparent&hide_border=true)](https://github.com/gugugu-b)
 
 ---
 
