@@ -34,12 +34,6 @@
 
 ---
 
-## 🏆 Contributions
-
-![Contribution Graph](https://raw.githubusercontent.com/gugugu-b/gugugu-b/master/profile/profile-gif/contribution.gif)
-
----
-
 <p align="center">
   <a href="https://github.com/gugugu-b">
     <img src="https://img.shields.io/badge/GitHub-gugugu--b-blue?style=flat-square&logo=github"/>
