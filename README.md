@@ -43,11 +43,11 @@
 
 | Repo | Description |
 |------|-------------|
+| [`HermesPet`](https://github.com/gugugu-b/HermesPet) | 🐾 Desktop AI companion living in your MacBook notch (Swift 6 / SwiftUI) |
 | [`AIInfra`](https://github.com/gugugu-b/AIInfra) | AI Infrastructure — chip-level to software stack, supporting LLM training & inference |
-| [`note-gen-sync`](https://github.com/gugugu-b/note-gen-sync) | Personal knowledge base sync (private) |
-| [`note-gen-image-sync`](https://github.com/gugugu-b/note-gen-image-sync) | Image assets for notes |
-| [`nas-resources-storage`](https://github.com/gugugu-b/nas-resources-storage) | NAS resource library |
-| [`server-testing-lab`](https://github.com/gugugu-b/server-testing-lab) | Server testing & learning lab |
+| [`note-gen-sync`](https://github.com/gugugu-b/note-gen-sync) | Personal knowledge base sync (NoteGen, private) |
+| [`nas-resources-storage`](https://github.com/gugugu-b/nas-resources-storage) | NAS hardware test docs & resources |
+| [`server-testing-lab`](https://github.com/gugugu-b/server-testing-lab) | Server testing & ops learning notes |
 | [`CS-Books`](https://github.com/gugugu-b/CS-Books) | 1000+ CS classic books, notes & interview guides 📚 |
 
 ---
