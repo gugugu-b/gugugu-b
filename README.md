@@ -7,7 +7,6 @@
 🎓 **Identity:** AI Infrastructure / GPU Cluster Network Engineer  
 🧪 **Core Focus:** AI Cluster Network Architecture & Performance Optimization  
 🎯 **Specialization:** Distributed Training Communication, GPU Cluster Scale-Up/Scale-Out  
-📊 **Current Scale:** 512~1024 GPU Multi-Node Clusters, Scaling Beyond
 
 ---
 
