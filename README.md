@@ -40,6 +40,12 @@ Hi, I'm **Pionites** — 专注 **国产 GPU / DCU 模型性能优化与 AI 基�
 
 `Profiling → Kernel / Layout / Pipeline → Numerical Regression → End-to-End Benchmark → Reproduction`
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/gugugu-b/gugugu-b/main/assets/operator-hotspots.gif" width="100%" alt="BW1100 Qwen3.5-9B baseline profiling: animated scan of fixed GPU kernel time shares. GEMM 41.6%, GDN 15.6%, nonzero 12.4%." />
+</p>
+
+算子热点来自 BW1100 / Qwen3.5-9B 基线的 15 个 decode 步采样，展示累计 GPU 内核时长占比。[采样口径与优化案例](docs/model-optimization.md)
+
 ## ⚙️ 技术地图
 
 | 方向 | 技术与关注点 |
@@ -84,6 +90,14 @@ Hi, I'm **Pionites** — 专注 **国产 GPU / DCU 模型性能优化与 AI 基�
 | [HermesPet](https://github.com/gugugu-b/HermesPet) | 住在 MacBook 刘海里的桌面 AI 伴侣，使用 Swift / SwiftUI。 |
 
 </details>
+
+## ✨ 持续构建
+
+<p align="center">
+  <a href="https://github.com/gugugu-b?tab=overview"><img src="https://raw.githubusercontent.com/gugugu-b/gugugu-b/main/assets/contribution-heatmap.gif" width="100%" alt="Animated heatmap of my real GitHub contributions over the past year, refreshed daily." /></a>
+</p>
+
+热力图使用 GitHub 实际贡献记录，每日自动刷新；扫描光效展示时间轴。
 
 ---
 
