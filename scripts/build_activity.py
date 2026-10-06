@@ -85,7 +85,7 @@ def activity(calendar):
         x = 42 + (i/64)*1114
         d.line((max(42, x-85), 291, x, 291), fill=TEAL, width=3)
         d.ellipse((x-4, 287, x+4, 295), fill=TEXT)
-        d.text((42, 310), "REAL GITHUB ACTIVITY · DAILY REFRESH", font=font(12, True), fill=TEAL)
+        d.text((42, 310), "REAL GITHUB ACTIVITY · API SNAPSHOT", font=font(12, True), fill=TEAL)
         d.text((927, 310), "LESS", font=font(11, True), fill=MUTED)
         for j, color in enumerate(colors):
             d.rounded_rectangle((969+j*23, 308, 985+j*23, 324), radius=3, fill=color)

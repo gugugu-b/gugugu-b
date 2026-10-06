@@ -94,10 +94,10 @@ Hi, I'm **Pionites** — 专注 **国产 GPU / DCU 模型性能优化与 AI 基�
 ## ✨ 持续构建
 
 <p align="center">
-  <a href="https://github.com/gugugu-b?tab=overview"><img src="https://raw.githubusercontent.com/gugugu-b/gugugu-b/main/assets/contribution-heatmap.gif" width="100%" alt="Animated heatmap of my real GitHub contributions over the past year, refreshed daily." /></a>
+  <a href="https://github.com/gugugu-b?tab=overview"><img src="https://raw.githubusercontent.com/gugugu-b/gugugu-b/main/assets/contribution-heatmap.gif" width="100%" alt="Animated heatmap of my real GitHub contributions over the past year. The date range is shown in the image." /></a>
 </p>
 
-热力图使用 GitHub 实际贡献记录，每日自动刷新；扫描光效展示时间轴。
+热力图使用 GitHub 实际贡献记录，快照日期见图中时间范围；扫描光效展示时间轴。
 
 ---
 
