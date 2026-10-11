@@ -74,7 +74,7 @@ Hi, I'm **Pionites** — 专注 **国产 GPU / DCU 模型性能优化与 AI 基�
 
 | 项目 | 用途 |
 | :--- | :--- |
-| [**server-testing-lab**](https://github.com/gugugu-b/server-testing-lab) | 服务器运维学习笔记：部署、配置、监控与安全实践。 |
+| [**server-testing-lab**](https://github.com/gugugu-b/server-testing-lab) | 服务器 SIT 测试实践：存储、内存、GPU、电源与整机稳定性，附配置和排障笔记。 |
 | [**nas-resources-storage**](https://github.com/gugugu-b/nas-resources-storage) | NAS 硬件测试文档与资源：电源、SSD、固件与系统配置。 |
 
 <details>
