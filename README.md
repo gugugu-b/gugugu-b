@@ -30,9 +30,9 @@ Hi, I'm **Pionites** — 专注 **国产 GPU / DCU 模型性能优化与 AI 基�
 | :--- | :--- | :--- |
 | **BW150 · Qwen3-TTS-12Hz-1.7B** | HIP 融合注意力与采样；静态 KV Cache、多 batch GPU Graph；Code2Wav BF16 / SDPA / SplitConv；参考音频 IPC 与同步优化 | 单卡、40 并发、400 请求，新容器完整 ICL **第二轮 Mean RTF 0.643 / TTFP 461 ms**，400/400 成功 |
 | **BW1100 · Qwen3.5-9B** | 稀疏采样惩罚、GDN 分块、因果卷积状态更新、BF16 权重物理布局与融合路径 | 单卡 BF16、2K/2K、C256：输出吞吐 **3049 → 4029 tok/s（观察提升 32.1%）**，768/768 成功 |
-| **K100-AI · Qwen3.8-27B INT8** | HIP Multi-M LDS GEMV、Triton Long-KV GQA、AITER 形状配置、MTP 与 rocBLAS GEMM 选优 | TP2、C8，干净容器三轮均值：**4K/1K 206.84 tok/s；64K/1K 30.39 tok/s**，96/96 请求通过长度与错误检查 |
+| **[K100-AI · Qwen3.8-27B INT8](https://github.com/gugugu-b/qwen3.8-k100-ai-int8)** | v2：Multi-M GEMV、Long-KV GQA、18 个 INT8 Triton tile、native BF16 one-stage AllReduce 资格筛选；源码与复现材料已公开 | TP2、C8，v2 干净容器三轮输出吞吐均值：**4K/1K 238.00 tok/s；64K/1K 31.65 tok/s** |
 
-> 以上均为各自测试条件下的记录。BW150 的 ICL 首轮 RTF 为 0.770；BW1100 部分阶段使用不同物理卡，32.1% 为累积配置观察结果。各场景的吞吐、组件微测与端到端延迟分别统计。
+> 以上均为各自测试条件下的记录。BW150 的 ICL 首轮 RTF 为 0.770；BW1100 的 32.1% 为跨物理卡累积配置观察结果；K100-AI 上述 C8 吞吐点未通过仓库 SLA 门槛，完整准入验证仍在推进。各场景与历史版本分别统计。
 
 **更多实践**：DeepSeek 的 Prefill / Decode 分离与高并发评测、GLM 长上下文 SLO 分析，以及 K100-AI 上 TP1 / TP2 / TP4 的 Agent 长上下文、缓存恢复和稳定性优化。
 
@@ -65,8 +65,9 @@ Hi, I'm **Pionites** — 专注 **国产 GPU / DCU 模型性能优化与 AI 基�
 
 | 项目 | 用途 |
 | :--- | :--- |
+| [**qwen3.8-k100-ai-int8**](https://github.com/gugugu-b/qwen3.8-k100-ai-int8) | K100-AI / SGLang / TP2 INT8 推理优化：v2 源码、并发性能总表、精度记录与复现材料。 |
 | [**SLO**](https://github.com/gugugu-b/SLO) | 给定 TTFT / TPOT 阈值，自适应搜索 vLLM 的临界最大并发数。 |
-| [**bench**](https://github.com/gugugu-b/bench) | 扫描固定并发点，建立 vLLM 的吞吐与延迟表现。 |
+| [**bench**](https://github.com/gugugu-b/bench) | v1.3.3：固定并发扫描与 TTFT / TPOT 达标筛选；支持前缀重复负载、缓存命中率、投机接受率与 E2EL 指标汇总。 |
 | [**dcu-train-cookbook**](https://github.com/gugugu-b/dcu-train-cookbook) | DCU 训练性能参数与调优 cookbook。 |
 | [**rccl-study-notes**](https://github.com/gugugu-b/rccl-study-notes) | RCCL 学习笔记：7 天学习路径与性能调优。 |
 
@@ -75,7 +76,7 @@ Hi, I'm **Pionites** — 专注 **国产 GPU / DCU 模型性能优化与 AI 基�
 | 项目 | 用途 |
 | :--- | :--- |
 | [**server-testing-lab**](https://github.com/gugugu-b/server-testing-lab) | 服务器 SIT 测试实践：存储、内存、GPU、电源与整机稳定性，附配置和排障笔记。 |
-| [**nas-resources-storage**](https://github.com/gugugu-b/nas-resources-storage) | NAS 硬件测试文档与资源：电源、SSD、固件与系统配置。 |
+| [**nas-resources-storage**](https://github.com/gugugu-b/nas-resources-storage) | NAS 测试与配置资料：AC/DC 电源、PTAT、NVMe SSD 性能脚本及 BMC 固件。 |
 
 <details>
 <summary><strong>📚 学习资源与 Fork 项目</strong></summary>

@@ -1,6 +1,6 @@
 # 海光 DCU 模型优化实践
 
-整理日期：2026-10-06。这里汇总近期在 BW150、BW1100、K100-AI 上的优化工作与实测口径。
+最近同步：2026-10-19。这里汇总在 BW150、BW1100、K100-AI 上的优化工作与实测口径；K100-AI 当前公开版本为 v2，历史记录单独保留。
 
 ## BW150：Qwen3-TTS 的算子与流式流水线
 
@@ -45,6 +45,27 @@
 依据：2026-09-23《Qwen3.5-9B × BW1100：SGLang 调优复盘》。
 
 ## K100-AI：Qwen3.8-27B INT8 的短、长上下文优化
+
+### 当前公开版本：v2
+
+[项目仓库](https://github.com/gugugu-b/qwen3.8-k100-ai-int8) · [v2 复现入口](https://github.com/gugugu-b/qwen3.8-k100-ai-int8/blob/main/v2/submit/README.md) · [完整性能总表](https://github.com/gugugu-b/qwen3.8-k100-ai-int8/blob/main/v2/submit/docs/性能总表.md)
+
+v2 更新于2026-10-17，继续采用 K100-AI / gfx928、SGLang、两卡 TP2 和官方 Channel INT8 W8A8 权重。在既有 Multi-M LDS GEMV、权重转置缓存、Triton Long-KV、AITER 配置和 rocBLAS 库之上，增加 **18 个 INT8 Triton tile** 与 **BF16 native one-stage AllReduce 资格筛选**；厂商底层 native AllReduce kernel 保持原样。
+
+源码、分项 Diff、实际运行 overlay、编译与回退入口、依赖和资产 SHA、原始日志及逐请求数据已整理到公开仓库。性能总表覆盖 **38 组 v2 测量、114 个正式轮次**，区分协议、卡对、客户端并发和服务 / Graph 容量，不将排队诊断混作实际承载并发。
+
+**v2 干净容器复测，C8、每轮16请求、输出1024 token，三正式轮算术均值**：
+
+| 场景 | Output throughput | Mean TTFT 的轮间均值 | Mean TPOT 的轮间均值 | 仓库 SLA 通过轮 |
+| :--- | ---: | ---: | ---: | :--- |
+| 4K / 1K | 238.0041 tok/s | 4.8196 s | 27.9834 ms | 0/3 |
+| 64K / 1K | 31.6471 tok/s | 75.8993 s | 177.3519 ms | 0/3 |
+
+上述两组正式轮与预热均无 U+FFFD 标记，但吞吐记录不代表 SLA 或完整模型质量验收通过。GSM8K 本地冻结协议为 **1288/1319（97.6497%）**；最终官方协议等价性、其他三项精度、64K SLA 稳定性及最终组合验证仍待完成。更高并发的文本标记和失败测量在原仓库完整保留，不以峰值成绩替代通过结论。
+
+依据：公开仓库 v2 README、性能总表与[提交材料当前状态](https://github.com/gugugu-b/qwen3.8-k100-ai-int8/blob/main/v2/submit/docs/提交材料状态-20261017.md)。
+
+### 历史版本：v1 / 2026-10-06
 
 **平台与负载**：K100-AI / gfx928；双卡 TP2；SGLang；INT8 W8A8；C8、每轮16请求、输出1024 token。
 
